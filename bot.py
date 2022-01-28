@@ -121,6 +121,11 @@ async def cancel_spam(event):
 
 print(">> BOT STARTED <<")
 client.run_until_disconnected()
+
+
+
+
+
 import asyncio
 import datetime
 import os
@@ -217,4 +222,3 @@ async def broadcast(m, db):
             quote=True,
         )
     os.remove("broadcast.txt")
-
