@@ -21,11 +21,11 @@ spam_chats = []
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
   await event.reply(
-    "__**I'm MentionAll Bot**, I can mention almost 10000 members in group  👻\nClick **/help** for more information__",
+    "__**I'm User Mention Bot**, I can mention almost 10000 members in group I Am An Advance Telegram Bot Made By @Thealphaboz 👻\nClick **/help** for more information__",
     link_preview=False,
     buttons=(
       [
-        Button.url('📣 Channel', 'https://t.me/alpha_bot_updates'),
+        Button.url('📣 Channel', 'https://t.me/thealphabotz'),
         Button.url('📦 Owner/My Father', 't.me/adarsh2626')
       ]
     )
@@ -39,7 +39,7 @@ async def help(event):
     link_preview=False,
     buttons=(
       [
-        Button.url('📣 Channel', 'https://alpha_bot_updates'),
+        Button.url('📣 Channel', 'https://TheAlphaBotz'),
         Button.url('📦 My Father', 't.me/adarsh2626')
       ]
     )
