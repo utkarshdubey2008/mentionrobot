@@ -1,16 +1,42 @@
+
 {
-    "name": "Mention All Bot",
-    "description": "A simple mention all for telegram.",
-    "env": {
-        "TOKEN": {
-            "description": "Enter bot token."
-        },
-        "APP_ID": {
-            "description": "Get this value from my.telegram.org! Please do not steal."
-        },
-        "API_HASH": {
-            "description": "Get this value from my.telegram.org! Please do not steal."
-        }
+  "name": "Telethon Mention Bot",
+  "description": "A Telegram bot that responds to user mentions using Telethon",
+  "repository": "https://github.com/utkarshdubey2008/mentionrobot",
+  "keywords": [
+    "telegram",
+    "bot",
+    "telethon",
+    "mention"
+  ],
+  "env": {
+    "TELEGRAM_API_ID": {
+      "description": "Your Telegram API ID",
+      "required": true
     },
-    "buildpacks": [{"url": "heroku/python"}]
+    "TELEGRAM_API_HASH": {
+      "description": "Your Telegram API hash",
+      "required": true
+    },
+    "TELEGRAM_BOT_TOKEN": {
+      "description": "Your Telegram bot token",
+      "required": true
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql:hobby-dev",
+      "options": {
+        "version": "12"
+      }
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "scripts": {
+    "start": "python bot.py"
+  }
 }
