@@ -2,7 +2,7 @@
 {
   "name": "mentionrobot",
   "description": "A Telegram bot that listens for mentions and stores user IDs in a MongoDB database.",
-  "repository": "https://github.com/yourusername/mentionrobot",
+  "repository": "https://github.com/utkarshdubey2008/mentionrobot",
   "stack": "heroku-18",
   "buildpacks": [
     {
