@@ -1,39 +1,36 @@
 
 {
-  "name": "Telethon Mention Bot",
-  "description": "A Telegram bot that responds to user mentions using Telethon",
-  "repository": "https://github.com/utkarshdubey2008/mentionrobot",
-  "keywords": [
-    "telegram",
-    "bot",
-    "telethon",
-    "mention"
+  "name": "mentionrobot",
+  "description": "A Telegram bot that listens for mentions and stores user IDs in a MongoDB database.",
+  "repository": "https://github.com/yourusername/mentionrobot",
+  "stack": "heroku-18",
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
   ],
   "env": {
-    "TELEGRAM_API_ID": {
-      "description": "Your Telegram API ID",
+    "API_ID": {
+      "description": "Your Telegram API ID.",
       "required": true
     },
-    "TELEGRAM_API_HASH": {
-      "description": "Your Telegram API hash",
+    "API_HASH": {
+      "description": "Your Telegram API hash.",
       "required": true
     },
-    "TELEGRAM_BOT_TOKEN": {
-      "description": "Your Telegram bot token",
+    "BOT_TOKEN": {
+      "description": "Your Telegram bot token.",
+      "required": true
+    },
+    "MONGO_URI": {
+      "description": "The URI of your MongoDB database.",
       "required": true
     }
   },
   "addons": [
     {
-      "plan": "heroku-postgresql:hobby-dev",
-      "options": {
-        "version": "12"
-      }
-    }
-  ],
-  "buildpacks": [
-    {
-      "url": "heroku/python"
+      "plan": "mongolab:sandbox",
+      "as": "MONGO"
     }
   ],
   "scripts": {
